@@ -16,6 +16,10 @@ class User < ActiveRecord::Base
     favorites.where(post_id: post.id).first
   end
 
+  def voted(post)
+    votes.where(post_id: post.id).first
+  end
+
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :votes, dependent: :destroy

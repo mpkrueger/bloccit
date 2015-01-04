@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 20141231193512) do
     t.datetime "updated_at"
     t.string   "role"
     t.string   "avatar"
-    t.boolean  "email_favorites",        default: false
+    t.boolean  "email_favorites",        default: true
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

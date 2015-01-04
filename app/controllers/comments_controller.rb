@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-  # TODO: validate that user is logged-in (not a visitor) before letting them enter a comment...
 
   def create
     @post = Post.find(params[:post_id])
