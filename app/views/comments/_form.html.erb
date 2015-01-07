@@ -1,6 +1,6 @@
 <h4>Add a Comment:</h4>
 
-<%= form_for [post, post.comments.new] do |f| %>
+<%= form_for [@post, @post.comments.build], remote: true, method: :create do |f| %>
   Body: 
   <%= f.text_area :body %>
   <%= f.submit "Create Comment" %>
